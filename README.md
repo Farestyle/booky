@@ -1,15 +1,15 @@
-# MERN Bookstore
+ MERN Bookstore
 
 This repository contains a complete MERN bookstore application with a frontend and backend split for production-ready development.
 
-## Directory Structure
+ Directory Structure
 
 - `frontend/` — React + Vite application styled with Tailwind CSS.
 - `backend/` — Express API with MongoDB, Mongoose, JWT authentication, and secure route protection.
 
-## Setup Instructions
+ Setup Instructions
 
-### Backend
+Backend
 
 1. Navigate to the backend folder:
    ```bash
@@ -30,7 +30,7 @@ This repository contains a complete MERN bookstore application with a frontend a
 
 The backend runs on `http://localhost:5000` by default.
 
-### Frontend
+ Frontend
 
 1. Navigate to the frontend folder:
    ```bash
@@ -47,7 +47,7 @@ The backend runs on `http://localhost:5000` by default.
 
 The frontend runs on `http://localhost:5173` by default.
 
-## Features
+Features
 
 - User registration and login with secure JWT authentication.
 - HTTP-only cookies for token handling and protected API routes.
@@ -58,7 +58,7 @@ The frontend runs on `http://localhost:5173` by default.
 - Shopping cart and checkout simulation with order creation.
 - Responsive Tailwind UI with a modern high-contrast layout.
 
-## Notes
+ Notes
 
 - The frontend uses Axios with `withCredentials: true` to send cookies to the backend.
 - The backend uses CORS configured for `CLIENT_URL` in `.env`.
