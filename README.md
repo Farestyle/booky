@@ -1,70 +1,65 @@
-# GitHub Codespaces ♥️ React
+# MERN Bookstore
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+This repository contains a complete MERN bookstore application with a frontend and backend split for production-ready development.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Directory Structure
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+- `frontend/` — React + Vite application styled with Tailwind CSS.
+- `backend/` — Express API with MongoDB, Mongoose, JWT authentication, and secure route protection.
 
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+## Setup Instructions
 
-## Available Scripts
+### Backend
 
-In the project directory, you can run:
+1. Navigate to the backend folder:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Copy the environment template and update values:
+   ```bash
+   cp .env.example .env
+   ```
+4. Start the backend server:
+   ```bash
+   npm run dev
+   ```
 
-### `npm start`
+The backend runs on `http://localhost:5000` by default.
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
+### Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
+1. Navigate to the frontend folder:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend development server:
+   ```bash
+   npm run dev
+   ```
 
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
+The frontend runs on `http://localhost:5173` by default.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- User registration and login with secure JWT authentication.
+- HTTP-only cookies for token handling and protected API routes.
+- Book CRUD operations with backend route protection.
+- Search, category filtering, and pagination for the book catalog.
+- Responsive homepage with hero, shop, info, favorites, and premium footer sections.
+- Secure admin route at `/admin/add-book` for adding new books.
+- Shopping cart and checkout simulation with order creation.
+- Responsive Tailwind UI with a modern high-contrast layout.
 
-### `npm run build`
+## Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
-
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
-
-### Advanced Configuration
-
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
-
-### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
-
-### Troubleshooting
-
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+- The frontend uses Axios with `withCredentials: true` to send cookies to the backend.
+- The backend uses CORS configured for `CLIENT_URL` in `.env`.
+- For production deployments, use HTTPS and set `NODE_ENV=production`.
